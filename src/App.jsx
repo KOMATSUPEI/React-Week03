@@ -117,16 +117,6 @@ function App() {
       case "edit":
             setTempProduct({
               ...product,
-              id: product.id || "",
-              imageUrl: product.imageUrl || "",
-              title: product.title || "",
-              category: product.category || "",
-              unit: product.unit || "",
-              origin_price: product.origin_price || "",
-              price: product.price || "",
-              description: product.description || "",
-              content: product.content || "",
-              is_enabled: product.is_enabled || false,
               imagesUrl: product.imagesUrl || []
             });
             break;
@@ -212,6 +202,7 @@ const createProduct=async()=>{
     });
   }catch(error){
     alert("產品新增失敗！");
+    console.log(error);
   } 
 }
 
